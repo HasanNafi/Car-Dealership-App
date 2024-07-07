@@ -1,0 +1,106 @@
+<!-- Final Team Project
+Submission By: 
+Dhariya Vinod Vayas: C0840249
+Hemani Patel: C0853622
+Anik Hasan: C0847377
+Md Kamrul Islam Antar: C0826256
+Ishank Agarwal: C0850072 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Car for Sale</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Car for Sale</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#product-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#product-carousel" data-slide-to="1"></li>
+                            <li data-target="#product-carousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+
+                        </div>
+                        <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#product-carousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h1>Car for Sale</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet nunc elit, id blandit tellus volutpat id. Fusce euismod turpis a enim pretium fringilla. Nam dapibus, quam non aliquam vestibulum, justo arcu feugiat lorem, a auctor mauris lacus vel mi.</p>
+                    <ul id="car-details" class="text-capitalize">
+                    </ul>
+                    <a href="#" class="btn btn-primary">Contact Seller</a>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-muted">Car Management System</h5>
+                    <a href="/" class="btn btn-outline-secondary">Car List</a>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    Final Team Project
+                    <br>
+                    <h7 style="font-size: 16px;">Submission By: Dhariya Vinod Vayas, Hemani Patel, Anik Hasan, Md Kamrul Islam Antar, Ishank Agarwal</h7>
+                </div>
+            </div>
+    </footer>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const carId = urlParams.get('id');
+            const carDetailsList = document.getElementById('Car for Sale');
+
+            // Fetch car data from API and fill in form
+            fetch(`/cars/${carId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error fetching car record');
+                    }
+                    return response.json();
+                })
+                .then(car => {
+                    let html = ""
+                    for (const item in car) {
+                       
+                        
+                        if (item === "images") {
+                            let imgHtml = "";
+                            for (const item2 in car[item]) {
+                                let tempActive = "";
+                                if (item2 == 0)tempActive = "active";
+                                imgHtml += `<div class="carousel-item ${tempActive}"><img src="/uploads/${car[item][item2]}" class="d-block w-100" alt="Car Image ${item2 + 1}"></div>`;
+                            }
+                            $(".carousel-inner").html(imgHtml);
+                        }else{
+                            html += `<li>${item}: ${car[item]}</li>`;
+                        }
+                        $("#car-details").html(html);
+                    }
+                })
+                .catch(error => console.error(error));
+
+        </script>
+    </body>
+</html>

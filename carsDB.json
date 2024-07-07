@@ -1,0 +1,255 @@
+{
+    "cars": [
+        {
+            "id": "0011",
+            "make": "Audi",
+            "model": "TT",
+            "year": "2010",
+            "color": "Black",
+            "kms": "8451",
+            "vin": "1385582389",
+            "price": "7304",
+            "images": [
+                "audi-tt.webp"
+            ]
+        },
+        {
+            "id": "0012",
+            "make": "VW",
+            "model": "Tiguan",
+            "year": "2010",
+            "color": "White",
+            "kms": "9016",
+            "vin": "988682688",
+            "price": "9610",
+            "images": [
+                "vw-tiguan.webp"
+            ]
+        },{
+            "id": "0013",
+            "make": "Skoda",
+            "model": "Fabia",
+            "year": "2010",
+            "color": "Black",
+            "kms": "7542",
+            "vin": "1309311406",
+            "price": "8118",
+            "images": [
+                "skoda-fabia.webp"
+            ]
+        },
+        {
+            "id": "0014",
+            "make": "Toyota",
+            "model": "Avensis",
+            "year": "2008",
+            "color": "White",
+            "kms": "7779",
+            "vin": "1330727524",
+            "price": "9526",
+            "images": [
+                "toyota-avensis.webp"
+            ]
+        },{
+            "id": "0015",
+            "make": "Fiat",
+            "model": "Panda",
+            "year": "2012",
+            "color": "Black",
+            "kms": "9242",
+            "vin": "1113550689",
+            "price": "8547",
+            "images": [
+                "fiat-panda.webp"
+            ]
+        },
+        {
+            "id": "0016",
+            "make": "VW",
+            "model": "Fox",
+            "year": "2011",
+            "color": "White",
+            "kms": "7650",
+            "vin": "933352419",
+            "price": "7603",
+            "images": [
+                "vw-fox.webp"
+            ]
+        },{
+            "id": "0017",
+            "make": "Kia",
+            "model": "Forte",
+            "year": "2007",
+            "color": "Black",
+            "kms": "8306",
+            "vin": "1375188630",
+            "price": "7045",
+            "images": [
+                "kia-forte.webp"
+            ]
+        },
+        {
+            "id": "0018",
+            "make": "Jeep",
+            "model": "Wrangler",
+            "year": "2003",
+            "color": "White",
+            "kms": "9724",
+            "vin": "1435350115",
+            "price": "8601",
+            "images": [
+                "jeep-wrangler.webp"
+            ]
+        },{
+            "id": "0019",
+            "make": "Chevrolet",
+            "model": "Silverado",
+            "year": "2005",
+            "color": "Black",
+            "kms": "7354",
+            "vin": "1310127169",
+            "price": "9467",
+            "images": [
+                "chevrolet-silverado.webp"
+            ]
+        },
+        {
+            "id": "00110",
+            "make": "Jeep",
+            "model": "Renegade",
+            "year": "2004",
+            "color": "White",
+            "kms": "8177",
+            "vin": "997593664",
+            "price": "7728",
+            "images": [
+                "jeep-renegade.webp"
+            ]
+        },        {
+            "id": "00111",
+            "make": "Acura",
+            "model": "ILX",
+            "year": "2005",
+            "color": "Black",
+            "kms": "8427",
+            "vin": "1180356499",
+            "price": "9234",
+            "images": [
+                "acura-ilx.webp"
+            ]
+        },
+        {
+            "id": "00112",
+            "make": "Buick",
+            "model": "Encore",
+            "year": "2012",
+            "color": "White",
+            "kms": "7896",
+            "vin": "1173911670",
+            "price": "9257",
+            "images": [
+                "buick-encore.webp"
+            ]
+        },{
+            "id": "00113",
+            "make": "Audi",
+            "model": "R8",
+            "year": "2007",
+            "color": "Black",
+            "kms": "7685",
+            "vin": "1258609434",
+            "price": "9655",
+            "images": [
+                "audi-r8.webp"
+            ]
+        },
+        {
+            "id": "00114",
+            "make": "BMW",
+            "model": "X1",
+            "year": "2013",
+            "color": "White",
+            "kms": "7933",
+            "vin": "1439851936",
+            "price": "9086",
+            "images": [
+                "bmw-x1.webp"
+            ]
+        },{
+            "id": "00115",
+            "make": "Mini",
+            "model": "Countryman",
+            "year": "2006",
+            "color": "Black",
+            "kms": "7310",
+            "vin": "1286864720",
+            "price": "8887",
+            "images": [
+                "mini-countryman.webp"
+            ]
+        },
+        {
+            "id": "00116",
+            "make": "Tesla",
+            "model": "Model X",
+            "year": "2009",
+            "color": "White",
+            "kms": "8790",
+            "vin": "1179355407",
+            "price": "8539",
+            "images": [
+                "tesla-model-x.webp"
+            ]
+        },{
+            "id": "00117",
+            "make": "Peugeot",
+            "model": "208",
+            "year": "2007",
+            "color": "Black",
+            "kms": "9652",
+            "vin": "1045956325",
+            "price": "7841",
+            "images": [
+                "peugeot-208.webp"
+            ]
+        },
+        {
+            "id": "00118",
+            "make": "Seat",
+            "model": "Leon",
+            "year": "2014",
+            "color": "White",
+            "kms": "8775",
+            "vin": "1303633072",
+            "price": "8047",
+            "images": [
+                "seat-leon.webp"
+            ]
+        },{
+            "id": "00119",
+            "make": "Toyota",
+            "model": "Avensis",
+            "year": "2003",
+            "color": "Black",
+            "kms": "8535",
+            "vin": "880078044",
+            "price": "8426",
+            "images": [
+                "toyota-avensis.webp"
+            ]
+        },
+        {
+            "id": "00120",
+            "make": "Toyota",
+            "model": "Tundra",
+            "year": "2003",
+            "color": "White",
+            "kms": "7961",
+            "vin": "944398754",
+            "price": "8561",
+            "images": [
+                "toyota-tundra.webp"
+            ]
+        }
+    ]
+}
