@@ -1,0 +1,132 @@
+<!-- Final Team Project
+Submission By: 
+Dhariya Vinod Vayas: C0840249
+Hemani Patel: C0853622
+Anik Hasan: C0847377
+Md Kamrul Islam Antar: C0826256
+Ishank Agarwal: C0850072 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create Car</title>
+        <!-- Add Bootstrap stylesheet -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Create Car</h1>
+            <form id="create-car-form" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="id-input">Id:</label>
+                            <input type="number" class="form-control" id="id-input" name="id" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="make-input">Make:</label>
+                            <input type="text" class="form-control" id="make-input" name="make" required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="model-input">Model:</label>
+                            <input type="text" class="form-control" id="model-input" name="model" required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="year-input">Year:</label>
+                            <input type="number" class="form-control" id="year-input" name="year" required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="color-input">Color:</label>
+                            <input type="text" class="form-control" id="color-input" name="color" required>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="kms-input">Kms:</label>
+                            <input type="number" class="form-control" id="kms-input" name="kms" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="vin-input">Vin:</label>
+                            <input type="number" class="form-control" id="vin-input" name="vin" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="price-input">Price:</label>
+                            <input type="number" class="form-control" id="price-input" name="price" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="images-input">Images:</label>
+                            <input type="file" class="form-control" id="images-input" name="images" required multiple accept="image/*">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="/" class="btn btn-secondary">Cancle</a>
+            </form>
+        </div>
+
+        <footer class="footer">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-muted">Car Management System</h5>
+                        <a href="/" class="btn btn-outline-secondary">Car List</a>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        Final Team Project
+                        <br>
+                        <h7 style="font-size: 16px;">Submission By: Dhariya Vinod Vayas, Hemani Patel, Anik Hasan, Md Kamrul Islam Antar, Ishank Agarwal</h7>
+                    </div>
+                </div>
+        </footer>
+
+        <!-- Add Bootstrap JavaScript and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script>
+            const form = document.getElementById('create-car-form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const formData = new FormData(form);
+                fetch('/cars', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            response.text().then(function (data) {
+                                alert(data)
+                            });
+                        }
+                        window.location.href = '/';
+                    })
+                    .catch(error => console.error(error));
+            });
+
+        </script>
+    </body>
+</html>

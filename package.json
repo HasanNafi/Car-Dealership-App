@@ -1,0 +1,12 @@
+{
+  "name": "team_project",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "~4.16.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}
